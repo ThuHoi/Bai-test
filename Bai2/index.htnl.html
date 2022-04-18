@@ -6,40 +6,52 @@
 </head>
 <body>
 <p>Hiển thị 20 số chia hết cho 2 và 3 từ 19</p>
-<input type="submit"  onclick="inday()">
+<input type="submit" onclick="inday()">
 <p id="hienthi">Hiển thị</p>
 <script>
-   function hienThichia2 (number) {
-       if (number % 2 == 0)
-           return 1;
-       else {
-           return 0;
-       }
-   }
-   function hienThichia3 (number) {
-       if (number%3 ==0)
-           return 1;
-       else {
-           return 0;
-       }
+    function hienThichia2(number) {
+        if (number % 2 == 0)
+            return 1;
+        else {
+            return 0;
+        }
+    }
 
-   }
+    function hienThichia3(number) {
+        if (number % 3 == 0)
+            return 1;
+        else {
+            return 0;
+        }
 
-       function  inday() {
-           let i = 19
-           str = " "
-           let dem = 0
-           while (dem < 20) {
-               if (hienThichia2(i) == 1 && hienThichia3(i) == 1) {
-                   dem += 1;
-                   str += i + ", "
-               }
-               i++;
-           }
-           document.getElementById('hienthi').innerHTML = str;
+    }
+
+    function inday() {
+        let i = 19
+        str = " "
+        let dem = 0
+        while (dem < 20) {
+            if (hienThichia2(i) == 1 && hienThichia3(i) == 1) {
+                dem += 1;
+                str += i + ", "
+            }
+            i++;
+        }
+        document.getElementById('hienthi').innerHTML = str;
 
 
-       }
+    }
+
+    // //Cách 2
+    // let i = 19;
+    // let count = 0;
+    // while (count < 20) {
+    //     if (i % 2 == 0 && i % 3 == 0)
+    //         console.log(i);
+    //     count++
+    // }
+    // i++
+    // }
 
 
 </script>

@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Số nguyên tố</title>
+    <title>Số nguyên tố chia hết cho 2</title>
 </head>
 <body>
-Nhập số <input type="text">
-<p>Kết quả</p>
+Nhập số： <input type="text">
+<input type="submit" onclick="checksonguyento()" value="Tìm">
+<p id="kq">Kết quả</p>
 <script>
-    function hienThichia2 (number) {
+    function sochia2 (number) {
         if (number % 2 == 0)
             return 1;
         else {
@@ -26,7 +27,10 @@ Nhập số <input type="text">
             }
             return 1;
         }
+
     }
+
+
 
 </script>
 </body>
