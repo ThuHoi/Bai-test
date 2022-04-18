@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng các số từ a đến b</title>
+</head>
+<body>
+Nhập a <input id="h1" type="text"><br>
+Nhập b <input id="h2" type="text"><br>
+<input type="submit" onclick="tinhTong()" value="Tính">
+<p>Kết quả</p>
+<p id="kq1"></p>
+
+
+<script>
+    function tinhTong() {
+        let a = parseInt(document.getElementById('h1').value)
+        let b = parseInt(document.getElementById('h2').value)
+        let sum = 0
+        if (a < b) {
+            for (let i = a; i <= b; i++) {
+                sum = sum + i
+            }
+        } else if (a > b) {
+            for (let i = b; i <= a; i++) {
+                sum = sum + i
+            }
+        } else {
+            sum = a + b
+        }
+        document.getElementById('kq1').innerHTML = 'Tổng các số từ a đến b là: ' + sum
+    }
+
+</script>
+</body>
+</html>

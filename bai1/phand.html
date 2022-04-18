@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thế kỷ</title>
+</head>
+<body>
+<input id="h1" type="text">
+<input type="submit" onclick="tinhTheky()" value="Tính">
+<p id="kq">Kết quả</p>
+
+<script>
+    function tinhTheky() {
+        let nam = parseInt(document.getElementById('h1').value)
+        let theky = 0
+
+        if (nam % 100 == 0) {
+            theky = parseInt(nam / 100)
+        } else {
+            theky = parseInt(nam / 100 + 1)
+        }
+        document.getElementById('kq').innerHTML = 'Thế kỷ : ' + theky
+    }
+</script>
+</body>
+</html>

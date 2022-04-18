@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+Nhập số <input type="text">
+<p>Kết quả</p>
+<script>
+    function hienThichia2 (number) {
+        if (number % 2 == 0)
+            return 1;
+        else {
+            return 0;
+        }
+    }
+    function checksonguyento (number) {
+        if (number < 2)
+            return 0;
+        else {
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    return 0;
+                }
+            }
+            return 1;
+        }
+    }
+
+</script>
+</body>
+</html>

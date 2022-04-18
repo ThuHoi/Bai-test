@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input id="h1" type="text">
+<input type="submit" onclick="tinh()" value="Tính">
+<p id="kq1">Chu vi</p>
+<p id="kq2">Diện tích</p>
+<script>
+    function tinh() {
+        let a = parseInt(document.getElementById("h1").value)
+        let cv = a * 4
+        let s = a * a
+        document.getElementById('kq1').innerHTML = "Chu vi là: " + cv
+        document.getElementById('kq2').innerHTML = "Diện tích là: " + s
+    }
+
+
+</script>
+</body>
+</html>

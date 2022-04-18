@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính a^2, a^b</title>
+</head>
+<body>
+Nhập a <input id="h1" type="text"><br>
+Nhập b <input id="h2" type="text"><br>
+<input type="submit" onclick="phepTinh()" value="Tính">
+<p>Kết quả</p>
+<p id="kq1">a^2:</p>
+<p id="kq2">a^b:</p>
+
+<script>
+    function phepTinh() {
+        let a = parseInt(document.getElementById('h1').value)
+        let b = parseInt(document.getElementById('h2').value)
+        let mu1 = a ** 2
+        let mu2 = a ** b
+
+        document.getElementById('kq1').innerHTML = "a^2 là: " + mu1
+        document.getElementById('kq2').innerHTML = "a^b là: " + mu2
+    }
+</script>
+</body>
+</html>
